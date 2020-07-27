@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. LOL
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let styles = {
+    textAlign: "center",
+    paddingTop: '10px',
+    color: 'green'
+};
+
+
+
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            counter: 1
+        }
+    }
+    click = () => {
+        this.setState({
+            counter:  this.state.counter + 1
+        })
+
+        console.log(this.state.counter)
+    }
+    render() {
+        return (
+            <>
+                <div id={this.state.counter}
+                style={styles}>
+                    {this.state.counter}
+                </div>
+                <button onClick={this.click}>
+                    Add counter
+                </button>
+            </>
+        );
+    }
 }
+
 
 export default App;
