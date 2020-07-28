@@ -5,13 +5,17 @@ import './index.css';
 //import plus from './components/myComponent'
 //import MyCalc from './components/MyCalc'
 //import MyTimer from './components/MyTimer'
+//import MyTracking from './components/MyTracking'
+//import MyTodo from './components/MyTodo'
+import MyResize from './components/MyResize'
 
-import MyTracking from './components/MyTracking'
 
 ReactDOM.render(
   //<MyTimer />,
    // <MyCalc />,
-    <MyTracking />,
+   // <MyTracking />,
+   // <MyTodo />,
+    <MyResize />,
    // <App />,
   document.getElementById('root')
 );
