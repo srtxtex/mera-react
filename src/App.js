@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from './components/button/button'
 
 let styles = {
     textAlign: "center",
@@ -14,7 +15,8 @@ class App extends Component {
         super(props);
 
         this.state = {
-            counter: 1
+            counter: 1,
+            a: 'My button'
         }
     }
     click = () => {
@@ -31,9 +33,12 @@ class App extends Component {
                 style={styles}>
                     {this.state.counter}
                 </div>
-                <button onClick={this.click}>
-                    Add counter
-                </button>
+                <Button
+                    myText={`Hello ${this.state.counter}`}
+                    onClick={this.click}
+                >
+                    {this.state.a} {this.state.counter}
+                </Button>
             </>
         );
     }
