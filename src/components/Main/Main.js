@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './index.css';
+import {Link} from "react-router-dom";
 
 class Main extends Component {
     render() {
@@ -25,14 +26,11 @@ class Main extends Component {
 
                             <div class="col-4">
                                 <div class="portfolio-item">
-                                    <div class="portfolio-item__img">
-                                        <img src="project_organica.jpg" alt="Макет органика" />
-                                    </div>
                                     <div class="portfolio-item__title">
-                                        <a href="work-organica.html">Макет органика</a>
+                                        <Link to={'/calc'}>Калькулятор</Link>
                                     </div>
                                     <div class="portfolio-item__text">
-                                        <p>Верстка одностраничного сайта по PSD макету.</p>
+                                        <p>Простой пример калькулятора с исльзованием классовой компоненты</p>
                                     </div>
                                 </div>
                             </div>
@@ -41,28 +39,61 @@ class Main extends Component {
 
                             <div class="col-4">
                                 <div class="portfolio-item">
-                                    <div class="portfolio-item__img">
-                                        <img src="/img/portfolio/project_apollo.jpg" alt="Учебный макет Аполло" />
-                                    </div>
                                     <div class="portfolio-item__title">
-                                        <a href="#">Учебный макет Аполло</a>
+                                        <Link to={'/timer'}>Таймер</Link>
                                     </div>
                                     <div class="portfolio-item__text">
-                                        <p>Верстка лендинга хостинг компании. Мобильная адаптивность.</p>
+                                        <p>Запуск, остановка, сохранение результата таймера. Есть возможность скрыть таймер размонировав компоненту</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-4">
                                 <div class="portfolio-item">
-                                    <div class="portfolio-item__img">
-                                        <img src="/img/portfolio/project_portfolio.jpg" alt="Личный сайт портфолио" />
-                                    </div>
+
                                     <div class="portfolio-item__title">
-                                        <a href="#">Личный сайт портфолио</a>
+                                        <Link to={'/tracking'}>Трекинг курсора</Link>
                                     </div>
                                     <div class="portfolio-item__text">
-                                        <p>Верстка личного сайта портфолио на котором вы сейчас находитесь.</p>
+                                        <p>За курсором передвигается div с координатами курсора</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="row">
+
+                            <div className="col-4">
+                                <div className="portfolio-item">
+                                    <div className="portfolio-item__title">
+                                        <Link to={'/todo'}>TODO лист</Link>
+                                    </div>
+                                    <div className="portfolio-item__text">
+                                        <p>Добавление, удаление, редактирование списка</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div className="col-4">
+                                <div className="portfolio-item">
+                                    <div className="portfolio-item__title">
+                                        <Link to={'/resize'}>Ресайз</Link>
+                                    </div>
+                                    <div className="portfolio-item__text">
+                                        <p>Изменение размеров внутреннего плока пропорционально размерам окна</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-4">
+                                <div className="portfolio-item">
+                                    <div className="portfolio-item__title">
+                                        <a href="https://www.efset.org/cert/8BEbru">Сертификат</a>
+                                    </div>
+                                    <div className="portfolio-item__text">
+                                        <p>Сертификат по тесту английского языка.</p>
                                     </div>
                                 </div>
                             </div>
