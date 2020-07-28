@@ -1,33 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import useResize from "./useResize";
 import './index.css';
 
-const ratio = 2;
-
-const getWindowSize = () => {
-    return {
-        windowWidth: `${window.innerWidth}px`,
-        windowHeight: `${window.innerHeight}px`,
-        divWidth: `${window.innerWidth / ratio}px`,
-        divHeight: `${window.innerHeight / ratio}px`
-    }
-};
-
-
-function useResize(){
-    const [size, setSize] = useState(getWindowSize());
-
-    useEffect(() => {
-        function handlerResize(){
-            setSize(getWindowSize());
-        }
-        window.addEventListener('resize', handlerResize);
-        return () => window.removeEventListener('resize', handlerResize);
-    }, []);
-    return size;
-}
-
 function MyResize(props) {
-    const size = useResize();
+    const size = useResize(2);
 
     return (
         <div className="warp">
