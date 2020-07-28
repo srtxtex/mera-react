@@ -1,23 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './App';
-//import plus from './components/myComponent'
-//import MyCalc from './components/MyCalc'
-//import MyTimer from './components/MyTimer'
-//import MyTracking from './components/MyTracking'
-//import MyTodo from './components/MyTodo'
-import MyResize from './components/MyResize'
+import App from "./App";
+import { Provider } from "react-redux";
+import store from './components/store/store'
 
+//import { createStore, applyMiddleware } from 'redux';
+//import thunk from 'redux-thunk';
+//import reducer  from './comtonents/reducers'
+
+//const store = createStore(reducer, applyMiddleware(thunk));
+
+
+//import './index.css';
+
+/*
+<Provider store={store}>
+    <App />
+</Provider>,
+
+*/
 
 ReactDOM.render(
-  //<MyTimer />,
-   // <MyCalc />,
-   // <MyTracking />,
-   // <MyTodo />,
-    <MyResize />,
-   // <App />,
-  document.getElementById('root')
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
 );
 
 
