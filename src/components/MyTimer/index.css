@@ -1,0 +1,9 @@
+.showTimer {
+
+    background: linear-gradient(45deg, rgb(245, 93, 131), rgb(54, 54, 171));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}

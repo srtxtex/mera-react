@@ -54,7 +54,12 @@ class MyTodo extends React.Component {
         const { orderList, addToOrderList, removeFromOrderList, editListItem } = this.props;
 
         return (
-            <div>
+            <div className="todoList" style={{
+
+                textAlign: 'center',
+                minHeight: '100vh'
+            }}>
+
                 <input
                     value={this.state.itemName}
                     onChange={(e) => this.setState({itemName: e.target.value})}
@@ -68,7 +73,9 @@ class MyTodo extends React.Component {
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            justifyContent: 'center',
                         }}
                     >
                         <div>

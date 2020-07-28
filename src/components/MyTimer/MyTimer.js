@@ -17,12 +17,12 @@ class MyTimer extends Component {
     render() {
         const { showTimer } = this.state;
         return (
-            <>
+            <div className="showTimer">
                 <button onClick={this.toggleTimer}>
                     { showTimer ? 'Скрыть' : 'Показать'} таймер
-                </button>
+                </button><br />
                 { showTimer && <Timer />}
-            </>
+            </div>
         );
     }
 }
